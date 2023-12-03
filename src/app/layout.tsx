@@ -1,4 +1,4 @@
-import { Inter, Lexend } from 'next/font/google'
+import { Inter, Marcellus } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -19,10 +19,11 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const lexend = Lexend({
+const marcellus = Marcellus({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
+  variable: '--font-marcellus',
+  weight: '400',
 })
 
 export default function RootLayout({
@@ -36,7 +37,7 @@ export default function RootLayout({
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
         inter.variable,
-        lexend.variable,
+        marcellus.variable,
       )}
     >
       <body className="flex h-full flex-col">{children}</body>

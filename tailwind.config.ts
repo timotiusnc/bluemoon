@@ -26,7 +26,7 @@ export default {
       },
       fontFamily: {
         sans: 'var(--font-inter)',
-        display: 'var(--font-lexend)',
+        display: 'var(--font-marcellus)',
       },
       maxWidth: {
         '2xl': '40rem',

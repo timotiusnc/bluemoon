@@ -2,6 +2,7 @@
 
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -85,11 +86,14 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <MobileNavLink href="#features">Love & Engangement</MobileNavLink>
+            <MobileNavLink href="#testimonials">
+              Customize Your Forever
+            </MobileNavLink>
+            <MobileNavLink href="#pricing">Gift for Her</MobileNavLink>
+            <MobileNavLink href="#pricing">Lab Grown Diamonds</MobileNavLink>
+            <MobileNavLink href="#pricing">Story of Blue Moon</MobileNavLink>
+            <MobileNavLink href="#pricing">Get Inspired</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -99,28 +103,26 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-10">
-      <Container>
-        <nav className="relative z-50 flex justify-between">
+    <header className="z-50 py-10">
+      <Container className="flex flex-col">
+        <Link href="#" aria-label="Home" className="hidden lg:block">
+          <Logo />
+        </Link>
+        <nav className="relative mt-5 flex justify-between lg:justify-center">
+          <Link href="#" aria-label="Home" className="block lg:hidden">
+            <Logo />
+          </Link>
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
-            </Link>
-            <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+            <div className="hidden rounded-lg bg-white/40 p-2 backdrop-blur-sm md:flex md:gap-x-6">
+              <NavLink href="#features">Love & Engangement</NavLink>
+              <NavLink href="#testimonials">Customize Your Forever</NavLink>
+              <NavLink href="#pricing">Gift for Her</NavLink>
+              <NavLink href="#pricing">Lab Grown Diamonds</NavLink>
+              <NavLink href="#pricing">Story of Blue Moon</NavLink>
+              <NavLink href="#pricing">Get Inspired</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
-            </div>
-            <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

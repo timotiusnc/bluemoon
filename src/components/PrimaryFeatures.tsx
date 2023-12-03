@@ -6,35 +6,34 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotExpenses from '@/images/screenshots/tangan1.jpg'
+import screenshotPayroll from '@/images/screenshots/tangan2.jpg'
+import screenshotReporting from '@/images/screenshots/tangan3.jpg'
+import screenshotVatReturns from '@/images/screenshots/tangan4.jpg'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Ethically Sourced',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      'Our jewelry is crafted from environmentally and socially responsible sources, upholding both beauty and ethics.',
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'Lifetime Warranty',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      'Each piece comes with a lifetime warranty, a testament to our commitment to enduring quality.',
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Exceptional Client Service',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      'We offer unparalleled client service, ensuring a seamless and personalized experience for every customer.',
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: 'Quality Over Everything',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      'Quality is our cornerstone, with each piece meticulously crafted by master artisans using only the finest materials.',
     image: screenshotReporting,
   },
 ]
@@ -63,24 +62,17 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-sky-600 pb-28 pt-20 sm:py-32"
     >
-      <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
-        width={2245}
-        height={1636}
-        unoptimized
-      />
+      <div id="features-bg" className="absolute inset-0"></div>
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            Realizing the jewelry of your dreams.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            Meticulously crafted to reflect your unique style and elegance,
+            making every moment shine brighter.
           </p>
         </div>
         <Tab.Group

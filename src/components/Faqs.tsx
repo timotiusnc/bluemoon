@@ -6,53 +6,59 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'What materials does Blue Moon use for its jewelry?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'Our creations are crafted in 18K gold, available in three tones: White, Yellow, and Rose Gold.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'What types of precious stones does Blue Moon offer?',
+      answer:
+        'Currently, we only specialize in both natural and lab-grown diamonds.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'How long will it take to receive my order?',
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        "The delivery time varies depending on what you order. For items that are in stock, we'll deliver them to you within 1-2 working days after we receive your payment. For pre-orders or custom orders, please allow 4-6 weeks for delivery.",
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer:
+        'We primarily accept bank transfers. However, we can also provide a payment link through Tokopedia if needed.',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'Does Blue Moon have offline store?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'No, we currently operate online only. However, if you are in Jakarta and would like to see our ready stocks in person, we can set up an appointment at your convenience, depending on availability.',
+    },
+    {
+      question: 'What is a lab-grown diamond?',
+      answer:
+        'Lab-grown diamonds are created in a laboratory setting and possess the same chemical composition, optical qualities, physical properties, and crystal structure as natural diamonds. (Source: GIA – Gemological Institute of America)',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'What is the difference between natural and lab grown diamonds?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'The main differences lie in their origin and price. Natural diamonds often contain minute amounts of nitrogen, whereas lab-grown diamonds do not.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+      question:
+        'Is it possible to distinguish between a natural and a lab-grown diamond by sight alone?',
+      answer: 'No, discerning the difference requires special equipment.',
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
+      question: 'Do lab grown diamonds come with certification?',
+      answer:
+        'Yes, similar to natural diamonds, lab-grown diamonds starting from 0.3 carats come with certification from the International Gemological Institute (IGI). For center stones above 1 carat, certification from the Gemological Institute of America (GIA) is also provided.',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question: "Why don't you offer a buyback program for lab-grown diamonds?",
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        'We offer lab-grown diamonds to help make your dream of owning a diamond a reality. We believe that jewelry, especially pieces that hold sentimental value, should be cherished forever.',
     },
   ],
 ]
