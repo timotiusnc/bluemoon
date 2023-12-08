@@ -2,7 +2,6 @@
 
 import { Fragment } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -90,7 +89,7 @@ function MobileNavigation() {
             <MobileNavLink href="#testimonials">
               Customize Your Forever
             </MobileNavLink>
-            <MobileNavLink href="#pricing">Gift for Her</MobileNavLink>
+            <MobileNavLink href="#pricing">Gifts for Her</MobileNavLink>
             <MobileNavLink href="#pricing">Lab Grown Diamonds</MobileNavLink>
             <MobileNavLink href="#pricing">Story of Blue Moon</MobileNavLink>
             <MobileNavLink href="#pricing">Get Inspired</MobileNavLink>
@@ -103,20 +102,28 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="z-50 py-10">
+    <header className="z-50 py-5">
       <Container className="flex flex-col">
-        <Link href="#" aria-label="Home" className="hidden lg:block">
+        <Link
+          href="/"
+          aria-label="Blue Moon Jewellery"
+          className="hidden lg:block"
+        >
           <Logo />
         </Link>
         <nav className="relative mt-5 flex justify-between lg:justify-center">
-          <Link href="#" aria-label="Home" className="block lg:hidden">
+          <Link
+            href="/"
+            aria-label="Blue Moon Jewellery"
+            className="block lg:hidden"
+          >
             <Logo />
           </Link>
           <div className="flex items-center md:gap-x-12">
             <div className="hidden rounded-lg bg-white/40 p-2 backdrop-blur-sm md:flex md:gap-x-6">
-              <NavLink href="#features">Love & Engangement</NavLink>
-              <NavLink href="#testimonials">Customize Your Forever</NavLink>
-              <NavLink href="#pricing">Gift for Her</NavLink>
+              <NavLink href="/love-engagement">Love & Engangement</NavLink>
+              <NavLink href="/customize">Customize Your Forever</NavLink>
+              <NavLink href="/gifts">Gifts for Her</NavLink>
               <NavLink href="#pricing">Lab Grown Diamonds</NavLink>
               <NavLink href="#pricing">Story of Blue Moon</NavLink>
               <NavLink href="#pricing">Get Inspired</NavLink>

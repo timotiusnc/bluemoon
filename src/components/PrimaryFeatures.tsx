@@ -62,15 +62,15 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-sky-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-sky-100 pb-28 pt-20 sm:py-32"
     >
-      <div id="features-bg" className="absolute inset-0"></div>
+      <div id="features-bg" className="absolute inset-0 hidden"></div>
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="font-display text-3xl tracking-tight text-black sm:text-4xl md:text-5xl">
             Realizing the jewelry of your dreams.
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          <p className="mt-6 text-lg tracking-tight text-slate-800">
             Meticulously crafted to reflect your unique style and elegance,
             making every moment shine brighter.
           </p>
@@ -90,8 +90,8 @@ export function PrimaryFeatures() {
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5',
+                          ? 'bg-sky-100 lg:bg-blue-500/10 lg:ring-1 lg:ring-inset lg:ring-sky-500/10'
+                          : 'hover:bg-blue-500/10 lg:hover:bg-blue-500/5',
                       )}
                     >
                       <h3>
@@ -99,8 +99,8 @@ export function PrimaryFeatures() {
                           className={clsx(
                             'font-display text-lg ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
+                              ? 'text-slate-600 lg:text-black'
+                              : 'text-slate-900 hover:text-black lg:text-black',
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -111,8 +111,8 @@ export function PrimaryFeatures() {
                         className={clsx(
                           'mt-2 hidden text-sm lg:block',
                           selectedIndex === featureIndex
-                            ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white',
+                            ? 'text-black'
+                            : 'text-slate-900 group-hover:text-black',
                         )}
                       >
                         {feature.description}
@@ -126,7 +126,7 @@ export function PrimaryFeatures() {
                   <Tab.Panel key={feature.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
                       <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                      <p className="relative mx-auto max-w-2xl text-base text-slate-900 sm:text-center">
                         {feature.description}
                       </p>
                     </div>
