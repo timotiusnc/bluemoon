@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Gifts for Her',
 }
 
-export default function LoveEngagement() {
+export default function Gifts() {
   return (
     <>
       <Header />
@@ -35,21 +35,21 @@ export default function LoveEngagement() {
         </div>
         <section className="relative overflow-hidden bg-slate-50 py-20">
           <Container>
-            <div className="flex justify-center gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               <BlurContainer
-                url="/engagement"
+                url="#"
                 image={earrings}
                 title="Earrings"
                 alt="Earrings illustration"
               />
               <BlurContainer
-                url="/"
+                url="#"
                 image={necklace}
                 title="Necklace"
                 alt="Necklace illustration"
               />
               <BlurContainer
-                url="/"
+                url="#"
                 image={rings}
                 title="Rings"
                 alt="Rings illustration"
