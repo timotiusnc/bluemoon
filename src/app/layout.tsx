@@ -9,8 +9,18 @@ export const metadata: Metadata = {
     template: '%s - Blue Moon',
     default: 'Blue Moon - Natural & Lab Grown Diamond',
   },
+  openGraph: {
+    images: [
+      {
+        url: 'https://bluemoonid.vercel.app/opengraph-image.jpg',
+        type: 'image/jpeg',
+        width: 1024,
+        height: 1024,
+      },
+    ],
+  },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Natural and lab-grown diamond. Realizing the jewelry of your dreams. Talk to us about your dream piece!',
 }
 
 const inter = Inter({

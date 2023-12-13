@@ -5,10 +5,18 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+
+const links = [
+  { url: "/love", title: "Love & Engangement"},
+  {url: "/custom", title: "Customize Your Forever"},
+  {url: "/gifts", title: "Gifts for Her"},
+  {url: "/lab", title: "Lab Grown Diamonds"},
+  {url: "/story", title: "Story of Blue Moon"},
+  {url: "/inspire", title: "Get Inspired"},
+]
 
 function MobileNavLink({
   href,
@@ -85,14 +93,7 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Love & Engangement</MobileNavLink>
-            <MobileNavLink href="#testimonials">
-              Customize Your Forever
-            </MobileNavLink>
-            <MobileNavLink href="#pricing">Gifts for Her</MobileNavLink>
-            <MobileNavLink href="#pricing">Lab Grown Diamonds</MobileNavLink>
-            <MobileNavLink href="#pricing">Story of Blue Moon</MobileNavLink>
-            <MobileNavLink href="#pricing">Get Inspired</MobileNavLink>
+            {links.map(({ url, title }) => <MobileNavLink key={url} href={url}>{title}</MobileNavLink>)}
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -121,12 +122,7 @@ export function Header() {
           </Link>
           <div className="flex items-center md:gap-x-12">
             <div className="hidden rounded-lg bg-white/40 p-2 backdrop-blur-sm md:flex md:gap-x-6">
-              <NavLink href="/love-engagement">Love & Engangement</NavLink>
-              <NavLink href="/customize">Customize Your Forever</NavLink>
-              <NavLink href="/gifts">Gifts for Her</NavLink>
-              <NavLink href="#pricing">Lab Grown Diamonds</NavLink>
-              <NavLink href="#pricing">Story of Blue Moon</NavLink>
-              <NavLink href="#pricing">Get Inspired</NavLink>
+              {links.map(({ url, title }) => <NavLink key={url} href={url}>{title}</NavLink>)}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">

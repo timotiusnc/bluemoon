@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Header } from '@/components/Header'
-import bgHero from '@/images/hero/customize.png'
+import bgHero from '@/images/hero/customize.jpg'
 import { Container } from '@/components/Container'
 import { WhatsAppLogo } from '@/components/logo/Whatsapp'
 import { Button } from '@/components/Button'
@@ -10,11 +10,7 @@ import { type Metadata } from 'next'
 import { generateWALink } from '@/util/util'
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s - Blue Moon',
-    default: 'Blue Moon - Natural & Lab Grown Diamond',
-  },
-  description: 'Customize your forever',
+  title: 'Customize your forever',
 }
 
 export default function LoveEngagement() {
@@ -37,11 +33,7 @@ export default function LoveEngagement() {
             </h1>
           </div>
         </div>
-        <section
-          id="features"
-          aria-label="Features for running your books"
-          className="relative overflow-hidden bg-slate-50 py-10"
-        >
+        <section className="relative overflow-hidden bg-slate-50 py-20">
           <Container>
             <div className="flex flex-col items-center gap-8">
               <h2 className="text-3xl">Contact Us</h2>
