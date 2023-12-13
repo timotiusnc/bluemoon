@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Header } from '@/components/Header'
-import bgHero from '@/images/hero/love.jpg'
+import bgHero from '@/images/hero/lab.jpg'
 import engagement from '@/images/pages/love/engagement.jpg'
 import wedding from '@/images/pages/love/wedding.jpg'
 import { Container } from '@/components/Container'
