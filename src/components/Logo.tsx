@@ -10,11 +10,11 @@ export function Logo(props: React.ComponentPropsWithoutRef<'div'>) {
       <Image
         src={logo}
         alt=""
-        className="h-auto w-10 object-cover lg:w-6"
+        className="h-auto w-24 object-cover lg:w-56"
         priority
       />
-      <div className="font-display">BLUE MOON</div>
-      <div className="font-display text-xs">JEWELLERY</div>
+      {/* <div className="font-display">BLUE MOON</div>
+      <div className="font-display text-xs">JEWELLERY</div> */}
     </div>
   )
 }
