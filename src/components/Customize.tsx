@@ -6,11 +6,7 @@ import { Button } from './Button'
 
 export function CustomizeWithUs() {
   return (
-    <section
-      id="customize"
-      aria-label="Customize with us"
-      className="bg-sky-100 py-32"
-    >
+    <section id="customize" aria-label="Customize with us" className="py-32">
       <Container className="flex flex-col items-center gap-16 lg:flex-row">
         <Image
           src={customize}
