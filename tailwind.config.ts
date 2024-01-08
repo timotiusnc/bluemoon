@@ -31,6 +31,12 @@ export default {
       maxWidth: {
         '2xl': '40rem',
       },
+      colors: {
+        'gold-300': '#d9bfa1',
+        'gold-400': '#c9a58a',
+        'gold-500': '#b08357',
+        'gold-600': '#a37a4f',
+      },
     },
   },
   plugins: [formsPlugin, headlessuiPlugin],

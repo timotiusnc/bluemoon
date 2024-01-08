@@ -10,12 +10,10 @@ import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 
 const links = [
-  { url: "/love", title: "Love & Engangement"},
-  {url: "/custom", title: "Customize Your Forever"},
-  {url: "/gifts", title: "Gifts for Her"},
-  {url: "/lab", title: "Lab Grown Diamonds"},
-  {url: "/story", title: "Story of Blue Moon"},
-  {url: "/inspire", title: "Get Inspired"},
+  { url: '/love', title: 'Love & Engangement' },
+  { url: '/custom', title: 'Customize Your Forever' },
+  { url: '/lab', title: 'Lab Grown Diamonds' },
+  { url: '/story', title: 'Story of Blue Moon' },
 ]
 
 function MobileNavLink({
@@ -93,7 +91,11 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            {links.map(({ url, title }) => <MobileNavLink key={url} href={url}>{title}</MobileNavLink>)}
+            {links.map(({ url, title }) => (
+              <MobileNavLink key={url} href={url}>
+                {title}
+              </MobileNavLink>
+            ))}
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -104,7 +106,7 @@ function MobileNavigation() {
 export function Header() {
   return (
     <header className="z-50 py-5">
-      <Container className="flex flex-col">
+      <Container className="flex flex-row items-center lg:flex-col">
         <Link
           href="/"
           aria-label="Blue Moon Jewellery"
@@ -112,7 +114,7 @@ export function Header() {
         >
           <Logo />
         </Link>
-        <nav className="relative mt-5 flex justify-between lg:justify-center">
+        <nav className="relative mt-5 flex flex-1 items-center justify-around">
           <Link
             href="/"
             aria-label="Blue Moon Jewellery"
@@ -120,15 +122,17 @@ export function Header() {
           >
             <Logo />
           </Link>
-          <div className="flex items-center md:gap-x-12">
+          <div className="md:gap-x-12">
             <div className="hidden rounded-lg bg-white/40 p-2 backdrop-blur-sm md:flex md:gap-x-6">
-              {links.map(({ url, title }) => <NavLink key={url} href={url}>{title}</NavLink>)}
+              {links.map(({ url, title }) => (
+                <NavLink key={url} href={url}>
+                  {title}
+                </NavLink>
+              ))}
             </div>
           </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
+          <div className="md:hidden">
+            <MobileNavigation />
           </div>
         </nav>
       </Container>
