@@ -32,10 +32,13 @@ export default {
         '2xl': '40rem',
       },
       colors: {
+        'gold-200': '#efe5da',
         'gold-300': '#d9bfa1',
         'gold-400': '#c9a58a',
         'gold-500': '#b08357',
         'gold-600': '#a37a4f',
+        'bm-500': '#284960',
+        'bm-600': '#22354c',
       },
     },
   },

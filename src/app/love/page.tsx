@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { Header } from '@/components/Header'
-import bgHero from '@/images/hero/love.jpg'
-import engagement from '@/images/pages/love/engagement.jpg'
-import wedding from '@/images/pages/love/wedding.jpg'
+import bgHero1 from '@/images/pages/love/fig2.jpeg'
+import bgHero2 from '@/images/pages/love/fig7.jpeg'
 import { Container } from '@/components/Container'
-import { BlurContainer } from '@/components/Blur'
 import { Footer } from '@/components/Footer'
 import { type Metadata } from 'next'
+import { Button } from '@/components/Button'
+import { Commitment } from '@/components/Commitment'
 
 export const metadata: Metadata = {
   title: 'Love & Engagement',
@@ -16,40 +16,61 @@ export default function LoveEngagement() {
   return (
     <>
       <Header />
-      <main className="">
-        <div className="relative min-h-[250px] pb-20 text-center lg:min-h-[500px]">
-          <Image
-            src={bgHero}
-            alt=""
-            className="absolute h-full w-full object-cover"
-            priority
-          />
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white/50 px-5 py-10 backdrop-blur-[5px] lg:bg-white/40 lg:backdrop-blur-sm">
-            <h1 className="mx-auto max-w-4xl font-display text-3xl font-medium text-amber-950 lg:text-7xl">
-              <span className="bg-gradient-to-b from-sky-950 to-sky-700 bg-clip-text tracking-widest text-transparent">
-                Love & Engagement
-              </span>
-            </h1>
-          </div>
-        </div>
-        <section className="relative overflow-hidden bg-slate-50 py-20">
-          <Container>
-            <div className="flex justify-center gap-8 lg:gap-14">
-              <BlurContainer
-                url="/love/engagement"
-                image={engagement}
-                title="Engagement"
-                alt="Engagement illustration"
-              />
-              <BlurContainer
-                url="/love/wedding"
-                image={wedding}
-                title="Wedding"
-                alt="Wedding illustration"
-              />
+      <main>
+        <Container className="pb-10">
+          <div className="flex items-center justify-around py-10 lg:flex-row">
+            <div className="max-w-lg text-center lg:text-left">
+              <h1 className="mb-5 font-display text-2xl font-medium lg:text-3xl">
+                <span>
+                  Only the finest materials & craftsmanship, designed to dazzle
+                  as a symbol of your love story.
+                </span>
+              </h1>
+              <p className="leading-relaxed">
+                Discover our stunning collection of engagement rings and find
+                the perfect one you’ll say YES to.
+              </p>
             </div>
-          </Container>
-        </section>
+            <Image
+              src={bgHero1}
+              alt=""
+              className="hidden max-h-[500px] max-w-xl rounded-lg object-cover shadow-xl lg:block"
+              priority
+            />
+          </div>
+          <div className="flex items-center justify-around py-10">
+            <Image
+              src={bgHero2}
+              alt=""
+              className="hidden max-h-[500px] max-w-xl rounded-lg object-cover shadow-xl lg:block"
+              priority
+            />
+            <div className="max-w-lg text-center lg:text-left">
+              <h1 className="mb-5 font-display text-2xl font-medium lg:text-3xl">
+                <span>A promise of forever, encapsulated in a jewelry.</span>
+              </h1>
+              <p className="leading-relaxed">
+                Celebrate your Once In A Blue Moon moment And tie the knot with
+                the wedding band of your dreams.
+              </p>
+            </div>
+          </div>
+        </Container>
+        <div className="bg-gold-200 flex flex-col items-center gap-8 px-20 py-10 text-center font-display">
+          <div className="flex flex-col">
+            <span className="text-lg">
+              Discover the endless possibilities to create the perfect pair of
+              rings that tells your love story
+            </span>
+            <span className="font-semibold">
+              Customize your wedding bands with us
+            </span>
+          </div>
+          <Button href="/custom" color="gold" className="max-w-max px-10">
+            <span className="ml-3 font-bold">Start Now</span>
+          </Button>
+        </div>
+        <Commitment />
       </main>
       <Footer />
     </>
