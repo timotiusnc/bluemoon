@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Header } from '@/components/Header'
-import bgHero from '@/images/hero/customize.jpg'
+import bgHero from '@/images/pages/custom/hero.webp'
 import { Container } from '@/components/Container'
 import { WhatsAppLogo } from '@/components/logo/Whatsapp'
 import { Button } from '@/components/Button'
@@ -18,28 +18,35 @@ export default function LoveEngagement() {
     <>
       <Header />
       <main className="">
-        <div className="relative min-h-[250px] pb-20 text-center lg:min-h-[500px]">
+        <div className="relative min-h-[300px] pb-20 text-center lg:min-h-[500px]">
           <Image
             src={bgHero}
             alt=""
             className="absolute h-full w-full object-cover"
             priority
           />
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white/50 px-5 py-10 backdrop-blur-[5px] lg:bg-white/40 lg:backdrop-blur-sm">
-            <h1 className="mx-auto max-w-4xl font-display text-3xl font-medium text-amber-950 lg:text-7xl">
-              <span className="bg-gradient-to-b from-sky-950 to-sky-700 bg-clip-text tracking-widest text-transparent">
-                Customize Your Forever
-              </span>
+          <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-4 rounded-lg bg-white/40 px-5 py-10 font-display backdrop-blur-sm">
+            <h1 className="text-3xl text-slate-800 lg:text-6xl">
+              Customize Your Forever
             </h1>
+            <div className="hidden text-lg text-slate-800 lg:block">
+              Here at Blue Moon, we are dedicated to turn everyone&apos;s
+              jewelry dreams into reality.
+              <br />
+              With our finest craftsmanship, the possibilities are limitless.
+              <br />
+              We are here to make your dreams come true.
+            </div>
+            <Button href="/custom" color="gold" className="max-w-max px-10">
+              <span className="ml-3 font-bold">Start Now</span>
+            </Button>
           </div>
         </div>
         <section className="relative overflow-hidden bg-slate-50 py-20">
           <Container>
-            <div className="flex flex-col items-center gap-8">
-              <h2 className="text-3xl">Contact Us</h2>
-              <div className="">
-                Give us a heads up if you want to customize your diamonds
-              </div>
+            <div className="flex flex-col items-center gap-8 font-display">
+              <h2 className="text-3xl">Need Help?</h2>
+              <div>It would be our pleasure to assist you</div>
               <div className="flex justify-center gap-8 lg:gap-14">
                 <Button
                   href="mailto:contact@bluemoon.co.id"
@@ -47,7 +54,7 @@ export default function LoveEngagement() {
                   rel="noopener"
                 >
                   <Mail />
-                  <span className="ml-3 font-bold">Email Us</span>
+                  <span className="ml-3 font-bold">Email</span>
                 </Button>
                 <Button
                   href={generateWALink({ phone: '628176000823' })}
@@ -56,7 +63,7 @@ export default function LoveEngagement() {
                   rel="noopener"
                 >
                   <WhatsAppLogo className="w-6" />
-                  <span className="ml-3 font-bold">WhatsApp Us</span>
+                  <span className="ml-3 font-bold">WhatsApp</span>
                 </Button>
               </div>
             </div>

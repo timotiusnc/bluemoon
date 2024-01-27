@@ -30,7 +30,7 @@ const commitments = [
 
 export function Commitment() {
   return (
-    <section className="bg-bm-500 flex justify-around gap-4 px-20 py-10 font-display text-white">
+    <section className="bg-bm-500 flex flex-col justify-around gap-8 px-20 py-10 font-display text-white lg:flex-row">
       {commitments.map((commitment, id) => (
         <CommitmentCard key={id} {...commitment} />
       ))}
@@ -48,9 +48,9 @@ function CommitmentCard({
   desc: string
 }) {
   return (
-    <div className="flex flex-col items-center gap-2">
-      <Image src={img} alt={title} width={100} height={100} />
-      <h3 className="text-lg">{title}</h3>
+    <div className="flex flex-col items-center">
+      <Image src={img} alt={title} width={100} />
+      <h3 className="text-center text-lg">{title}</h3>
       <p className="max-w-[200px] text-center text-sm">{desc}</p>
     </div>
   )

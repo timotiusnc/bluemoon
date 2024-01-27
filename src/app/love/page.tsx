@@ -38,7 +38,7 @@ export default function LoveEngagement() {
               priority
             />
           </div>
-          <div className="flex items-center justify-around py-10">
+          <div className="hidden items-center justify-around py-10 lg:flex">
             <Image
               src={bgHero2}
               alt=""
