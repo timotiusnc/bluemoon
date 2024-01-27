@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export function Why() {
   return (
-    <section id="customize" aria-label="Customize with us">
+    <section className="py-10">
       <Link href="/custom">
         <Image
           src={why}

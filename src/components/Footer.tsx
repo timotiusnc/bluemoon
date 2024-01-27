@@ -9,7 +9,7 @@ import { TwitterSvg } from './logo/TwitterSvg'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer>
       <Container>
         <div className="flex flex-col items-center gap-8 py-16 font-display lg:flex-row lg:items-start">
           <div className="flex-1 self-center">
@@ -37,18 +37,11 @@ export function Footer() {
                 <InstagramSvg className="w-6" />
               </Link>
               <Link
-                href="https://instagram.com/blue.moon.id/"
+                href="https://www.facebook.com/profile.php?id=61550742867135"
                 target="_blank"
                 rel="noopener"
               >
                 <FacebookSvg className="w-6" />
-              </Link>
-              <Link
-                href="https://instagram.com/blue.moon.id/"
-                target="_blank"
-                rel="noopener"
-              >
-                <TwitterSvg className="w-6" />
               </Link>
             </div>
           </nav>

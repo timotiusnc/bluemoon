@@ -19,7 +19,7 @@ export function Slider() {
   }, [current])
 
   return (
-    <div className="relative">
+    <div className="relative pb-10">
       <div className="flex snap-x snap-mandatory overflow-hidden">
         <CarouselImg src={slider1} alt="Slider 1" id="slider1" />
         <CarouselImg src={slider2} alt="Slider 2" id="slider2" />
