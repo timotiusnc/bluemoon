@@ -12,7 +12,7 @@ export default function LabGrown() {
     <>
       <Header />
       <main className="">
-        <div className="relative min-h-[250px] pb-20 text-center lg:min-h-[500px]">
+        <div className="relative min-h-[250px] pb-20 text-center lg:min-h-[400px]">
           <Image
             src={bgHero}
             alt=""

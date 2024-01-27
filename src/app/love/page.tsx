@@ -19,12 +19,10 @@ export default function LoveEngagement() {
       <main>
         <Container className="pb-10">
           <div className="flex items-center justify-around py-10 lg:flex-row">
-            <div className="max-w-lg text-center lg:text-left">
-              <h1 className="mb-5 font-display text-2xl font-medium lg:text-3xl">
-                <span>
-                  Only the finest materials & craftsmanship, designed to dazzle
-                  as a symbol of your love story.
-                </span>
+            <div className="max-w-lg text-center font-display lg:text-left">
+              <h1 className="mb-5 text-2xl font-medium lg:text-3xl">
+                Only the finest materials & craftsmanship, designed to dazzle as
+                a symbol of your love story.
               </h1>
               <p className="leading-relaxed">
                 Discover our stunning collection of engagement rings and find
@@ -38,16 +36,16 @@ export default function LoveEngagement() {
               priority
             />
           </div>
+
           <div className="hidden items-center justify-around py-10 lg:flex">
             <Image
               src={bgHero2}
               alt=""
               className="hidden max-h-[500px] max-w-xl rounded-lg object-cover shadow-xl lg:block"
-              priority
             />
-            <div className="max-w-lg text-center lg:text-left">
-              <h1 className="mb-5 font-display text-2xl font-medium lg:text-3xl">
-                <span>A promise of forever, encapsulated in a jewelry.</span>
+            <div className="max-w-lg text-center font-display lg:text-left">
+              <h1 className="mb-5 text-2xl font-medium lg:text-3xl">
+                A promise of forever, encapsulated in a jewelry.
               </h1>
               <p className="leading-relaxed">
                 Celebrate your Once In A Blue Moon moment And tie the knot with
@@ -56,6 +54,7 @@ export default function LoveEngagement() {
             </div>
           </div>
         </Container>
+
         <div className="bg-gold-200 flex flex-col items-center gap-8 px-20 py-10 text-center font-display">
           <div className="flex flex-col">
             <span className="text-lg">

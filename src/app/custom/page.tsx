@@ -18,7 +18,7 @@ export default function LoveEngagement() {
     <>
       <Header />
       <main className="">
-        <div className="relative min-h-[300px] pb-20 text-center lg:min-h-[500px]">
+        <div className="relative min-h-[300px] pb-10 text-center lg:min-h-[400px]">
           <Image
             src={bgHero}
             alt=""
@@ -42,7 +42,8 @@ export default function LoveEngagement() {
             </Button>
           </div>
         </div>
-        <section className="relative overflow-hidden bg-slate-50 py-20">
+
+        <section className="relative overflow-hidden bg-slate-50 py-10">
           <Container>
             <div className="flex flex-col items-center gap-8 font-display">
               <h2 className="text-3xl">Need Help?</h2>
