@@ -44,7 +44,7 @@ export async function getProduct(
   return products?.find((product) => product.id === id)
 }
 
-export function getGDriveUrl(url: string) {
+function getGDriveUrl(url: string) {
   return `https://drive.google.com/thumbnail?id=${getGDriveID(url)}&sz=w500`
 }
 

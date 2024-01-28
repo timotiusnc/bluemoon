@@ -11,7 +11,6 @@ export default function PreviewImages({
   product: BluemoonProduct
 }) {
   const [selectedImg, setSelectedImg] = useState(product.images[0])
-  // console.log({ selectedImg })
 
   return (
     <div className="flex basis-1/2 flex-col-reverse items-center justify-center gap-4 lg:flex-row lg:items-start">

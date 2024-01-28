@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Container } from '@/components/Container'
-import { BluemoonProduct, getGDriveUrl, getProduct } from '@/app/shop/products'
+import { BluemoonProduct, getProduct } from '@/app/shop/products'
 import { Button } from '@/components/Button'
 import { formatCurrency, generateWALink } from '@/util/util'
 import PreviewImages from './PreviewImage'
@@ -29,13 +29,15 @@ export async function generateMetadata(
     }
   }
 
-  return {
+  const retval = {
     title: product.name,
     description: product.description,
     openGraph: {
-      images: [getGDriveUrl(product.images[0]), ...previousImages],
+      images: [product.images[0], ...previousImages],
     },
   }
+
+  return retval
 }
 
 export default async function Product({ params }: Props) {
