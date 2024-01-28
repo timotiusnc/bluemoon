@@ -74,20 +74,21 @@ function ProductCard({ product }: { product: BluemoonProduct }) {
         <ProductInfo title="Clarity" value={product.clarity} />
         <ProductInfo title="Size" value={product.size} />
         <ProductInfo title="Color" value={product.color} />
-      </div>
-      <div className="flex">
-        <Button
-          href={generateWALink({
-            phone: '628176000823',
-            text: `Hey I want to inquire about ${product.name} (https://bluemoonid.vercel.app/shop/${product.id})`,
-          })}
-          color="gold"
-          className="basis-full lg:basis-1/2"
-          target="_blank"
-          rel="noopener"
-        >
-          <span className="px-8 font-bold">Inquiry</span>
-        </Button>
+        <div className="flex flex-grow basis-1/3">
+          <Button
+            href={generateWALink({
+              phone: '628176000823',
+              text: `Hey I want to inquire about ${product.name} (https://bluemoonid.vercel.app/shop/${product.id})`,
+            })}
+            color="gold"
+            className="flex-grow"
+            target="_blank"
+            rel="noopener"
+          >
+            <span className="px-8 font-bold">Inquiry</span>
+          </Button>
+        </div>
+        <div className="flex flex-grow basis-1/3"></div>
       </div>
     </div>
   )
