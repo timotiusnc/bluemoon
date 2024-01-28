@@ -28,10 +28,7 @@ export async function getProducts(): Promise<BluemoonProduct[] | undefined> {
     clarity: product[6],
     color: product[7],
     images: product[8]
-      ? JSON.parse(product[8]).map(
-          (url: string) =>
-            `https://drive.google.com/thumbnail?id=${getGDriveID(url)}&sz=w500`,
-        )
+      ? JSON.parse(product[8]).map((url: string) => getGDriveUrl(url))
       : [],
     videos: product[9] ? JSON.parse(product[9]) : [],
     description: product[10],
@@ -45,6 +42,10 @@ export async function getProduct(
 ): Promise<BluemoonProduct | undefined> {
   const products = await getProducts()
   return products?.find((product) => product.id === id)
+}
+
+export function getGDriveUrl(url: string) {
+  return `https://drive.google.com/thumbnail?id=${getGDriveID(url)}&sz=w500`
 }
 
 function getGDriveID(url: string) {

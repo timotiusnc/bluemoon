@@ -11,6 +11,7 @@ export default function PreviewImages({
   product: BluemoonProduct
 }) {
   const [selectedImg, setSelectedImg] = useState(product.images[0])
+  // console.log({ selectedImg })
 
   return (
     <div className="flex basis-1/2 flex-col-reverse items-center justify-center gap-4 lg:flex-row lg:items-start">
@@ -21,7 +22,7 @@ export default function PreviewImages({
             src={image}
             alt={product.name}
             className={clsx(
-              'cursor-pointer rounded-lg border-2 border-red-300 object-cover shadow',
+              'cursor-pointer rounded-lg border-red-300 object-cover shadow',
               image === selectedImg ? 'border-2' : 'border-0',
             )}
             width={50}
