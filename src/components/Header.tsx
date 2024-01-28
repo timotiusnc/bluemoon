@@ -14,6 +14,7 @@ const links = [
   { url: '/custom', title: 'Customize Your Forever' },
   { url: '/lab', title: 'Lab Grown Diamonds' },
   { url: '/story', title: 'Story of Blue Moon' },
+  { url: '/shop', title: 'Shop' },
 ]
 
 function MobileNavLink({
