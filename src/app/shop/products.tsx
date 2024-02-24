@@ -1,4 +1,5 @@
 import { getSheet } from '@/lib/spreadsheet/get'
+import { cache } from 'react'
 
 export type BluemoonProduct = {
   id: string
@@ -37,12 +38,12 @@ export async function getProducts(): Promise<BluemoonProduct[] | undefined> {
   }))
 }
 
-export async function getProduct(
-  id: string,
-): Promise<BluemoonProduct | undefined> {
-  const products = await getProducts()
-  return products?.find((product) => product.id === id)
-}
+export const getProduct = cache(
+  async (id: string): Promise<BluemoonProduct | undefined> => {
+    const products = await getProducts()
+    return products?.find((product) => product.id === id)
+  },
+)
 
 function getGDriveUrl(url: string) {
   return `https://drive.google.com/thumbnail?id=${getGDriveID(url)}&sz=w500`

@@ -48,3 +48,6 @@ function ProductCard({ product }: { product: BluemoonProduct }) {
     </Link>
   )
 }
+
+// Otherwise, the shop page will be cached forever
+export const revalidate = 0
